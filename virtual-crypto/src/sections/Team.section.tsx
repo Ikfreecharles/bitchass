@@ -52,7 +52,7 @@ export const TeamSection = () => {
 const CustomSection = styled.article`
   .team-desc {
     text-align: center;
-    padding: 0 15rem;
+    padding: 0 10rem;
     .logo {
       width: 200px;
     }
@@ -73,6 +73,9 @@ const CustomSection = styled.article`
     .name {
       font-family: var(--main-font);
       font-size: 1.6rem;
+    }
+    .role {
+      color: var(--ter-black);
     }
   }
 `;

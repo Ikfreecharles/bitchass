@@ -6,8 +6,10 @@
   --main-black: #000;
   --main-white: #fff;
   --main-red: red;
+  --sec-red: #6d0000;
   --main-yellow: #fbbe35;
   --sec-black: #1e1f23;
+  --ter-black: #737376;
   --main-font: Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }

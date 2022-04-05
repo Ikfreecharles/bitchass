@@ -5,6 +5,7 @@ import {
   IContact,
   IFaq,
   IFeatures,
+  IImages,
   ILaunch,
   IMenu,
   IMint,
@@ -15,9 +16,9 @@ import {
   ITokenShare,
 } from "../types/interface";
 
-export const IMAGES: string[] = [
-  "./assets/images/BitChPoster1.jpg",
-  "./assets/images/BitChPoster2.jpg",
+export const IMAGES: IImages[] = [
+  { classname: "front", img: "./assets/images/BitChPoster1.jpg" },
+  { classname: "back", img: "./assets/images/BitChPoster2.jpg" },
 ];
 export const WHATIS: string[] = [
   ' This NFT Collection is GUARANTEED to revolutionize the way you look at UTILITY for an upcoming NFT project. ViZion Protocol is the first true decentralized cryptocurrency project that specializes in the Film, Music, Art and Entertainment Industry. "Bitch Ass" was Written, Directed and Produced by one of our co-founders, Bill Posley (Cobra Kai, The Neighborhood, Keenan). "Bitch Ass" is also starring one of ViZion Protocol &#39; s Co-Founders as well, Tunde Laleye (Black Panther, Zoo, Six.',
@@ -1017,7 +1018,6 @@ export const FAQ: IFaq[] = [
 export const TEAM: ITeam[] = [
   {
     image: "./assets/images/bill_posley-removebg-preview.png",
-
     name: "Bill Posley",
     role: "Co-Founder",
   },
@@ -1036,7 +1036,7 @@ export const MENU_ITEMS: IMenu[] = [
   { title: "About", id: "about" },
   { title: "The Project", id: "theproject" },
   { title: "Roadmap", id: "roadmap" },
-  { title: "FAQ", id: "feq" },
+  { title: "FAQ", id: "faq" },
   { title: "Team", id: "team" },
 ];
 export const SOCIAL_MEDIA: ISocial[] = [

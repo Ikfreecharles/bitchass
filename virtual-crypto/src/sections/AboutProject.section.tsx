@@ -24,7 +24,7 @@ export const AboutProjectSection = () => {
 };
 
 const CustomAbout = styled.article`
-  padding: 0 15rem;
+  padding: 0 10rem;
   text-align: center;
   height: 700px;
   .title {

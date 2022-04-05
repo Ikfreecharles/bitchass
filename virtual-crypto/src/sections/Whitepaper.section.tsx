@@ -18,7 +18,7 @@ export const WhitepaperSection = () => {
             {item}
           </p>
         ))}
-        <ButtonComponent>
+        <ButtonComponent link="https://www.dropbox.com/s/fb0rx4df78k6r5e/ViZion%20Protocol%20White%20Paper%202021.pdf?dl=0">
           {"Click here to view White Paper".toUpperCase()}
         </ButtonComponent>
       </CustomSection>
@@ -28,7 +28,7 @@ export const WhitepaperSection = () => {
 
 const CustomSection = styled.article`
   text-align: center;
-  padding: 0 15rem;
+  padding: 0 10rem;
   .title {
     margin-bottom: 0.5rem;
   }

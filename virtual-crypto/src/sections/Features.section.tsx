@@ -40,6 +40,9 @@ const CustomSection = styled.article`
         font-size: 1.5rem;
         margin-bottom: 1rem;
       }
+      .desc {
+        color: var(--ter-black);
+      }
     }
   }
   .image {

@@ -18,7 +18,7 @@ export const HeroSection = () => {
           <HeadingTwoComponent classname="mint-soon">
             NFT LAUNCH
           </HeadingTwoComponent>
-          <ButtonComponent>
+          <ButtonComponent link="https://vizionprotocol.io/">
             <div className="button-item">
               <span>MINT-SOON</span>
               <img

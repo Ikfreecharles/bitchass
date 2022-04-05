@@ -2,7 +2,6 @@ import styled from "styled-components";
 import "./App.css";
 import { MenuComponent } from "./components/Menu.component";
 import { NavbarComponent } from "./components/Navbar.component";
-import { useAppSelector } from "./redux/Hooks";
 import { AboutSection } from "./sections/About.section";
 import { AboutProjectSection } from "./sections/AboutProject.section";
 import { FaqSection } from "./sections/Faq.section";
@@ -19,7 +18,6 @@ import { WhatIsVizionSection } from "./sections/WhatIsVizion.section";
 import { WhitepaperSection } from "./sections/Whitepaper.section";
 
 function App() {
-  const isOpen = useAppSelector((state) => state.nav.isOpen);
   return (
     <CustomMain>
       <NavbarComponent />

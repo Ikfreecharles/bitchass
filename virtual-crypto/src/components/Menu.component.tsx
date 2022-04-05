@@ -17,18 +17,21 @@ export const MenuComponent = () => {
             <div className="social-media">
               {SOCIAL_MEDIA.map(({ name, Icon, link }) =>
                 name && name === "magiceden" ? (
-                  <div className="social-icon">
-                    <img
-                      src="./assets/images/MAGIC_EDEN_LOGO-removebg-preview.png"
-                      alt={name}
-                      className="magiceden"
-                    />
-                    <a href="mailto:"></a>
-                  </div>
+                  <a href={link}>
+                    <div className="social-icon">
+                      <img
+                        src="./assets/images/MAGIC_EDEN_LOGO-removebg-preview.png"
+                        alt={name}
+                        className="magiceden"
+                      />
+                    </div>
+                  </a>
                 ) : (
-                  <div className="social-icon">
-                    <Icon />
-                  </div>
+                  <a href={link}>
+                    <div className="social-icon">
+                      <Icon />
+                    </div>
+                  </a>
                 )
               )}
             </div>
@@ -46,17 +49,15 @@ export const MenuComponent = () => {
             ))}
           </div>
           <div className="right-side">
-            {MENU_ITEMS.map(({ title, id }, idx) => (
-              <ul key={idx}>
-                {
-                  <li>
-                    <a href={`#${id}`}>{title}</a>
-                  </li>
-                }
-              </ul>
-            ))}
+            <ul>
+              {MENU_ITEMS.map(({ title, id }, idx) => (
+                <li key={idx}>
+                  <a href={`#${id}`}>{title}</a>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>{" "}
+        </div>
       </LayoutComponent>
     </CustomMenu>
   );

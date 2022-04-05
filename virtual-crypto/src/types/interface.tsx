@@ -60,3 +60,7 @@ export interface IContact {
   type: "mail" | "link";
   link: string;
 }
+export interface IImages {
+  classname: string;
+  img: string;
+}

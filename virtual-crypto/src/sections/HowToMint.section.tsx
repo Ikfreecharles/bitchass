@@ -55,6 +55,9 @@ const CustomSection = styled.article`
         font-size: 1.6rem;
         margin-bottom: 1rem;
       }
+      .desc {
+        color: var(--ter-black);
+      }
     }
   }
 `;

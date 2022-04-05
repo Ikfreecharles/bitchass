@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { HeadingTwoComponent } from "../components/HeadingTwo.component";
 import { LayoutComponent } from "../components/Layout.component";
 import { IMAGES } from "../consts/constants";
 
 export const AboutSection = () => {
+  const [flipped, setFlipped] = useState<boolean>(false);
+
+  const flip = () => {
+    setFlipped((flipped) => !flipped);
+  };
   return (
     <LayoutComponent>
       <CustomArticle>
@@ -39,9 +44,18 @@ export const AboutSection = () => {
           </p>
         </div>
         <div className="right-side">
-          <div className="images">
-            {IMAGES.map((image, idx) => (
-              <img key={idx} src={image} alt="bitchposter" className="img" />
+          <div
+            className={`images ${flipped ? "flipped" : ""}`}
+            onMouseEnter={flip}
+            onMouseLeave={flip}
+          >
+            {IMAGES.map(({ classname, img }, idx) => (
+              <img
+                key={idx}
+                src={img}
+                alt="bitchposter"
+                className={classname}
+              />
             ))}
           </div>
         </div>
@@ -59,14 +73,61 @@ const CustomArticle = styled.article`
       color: var(--main-red);
     }
   }
+  .front,
+  .back,
   .img {
     width: 250px;
     margin: 1rem 0;
     margin-left: -2rem;
   }
+
   .right-side {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    .images {
+      height: 450px;
+      margin: 0;
+      padding: 0;
+      top: 20px;
+      width: 330px;
+
+      position: relative;
+      transform-style: preserve-3d;
+      box-sizing: border-box;
+      .front,
+      .back {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: $new-white;
+        padding: 10px;
+        position: absolute;
+        border-radius: 10px;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: -webkit-transform ease 500ms;
+        transition: transform ease 500ms;
+      }
+      .front {
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+      .back {
+        background: $new-white;
+        transform: rotateY(-180deg);
+        padding: 20px;
+        font-size: 20px;
+      }
+      &.flipped {
+        .front {
+          transform: rotateY(180deg);
+        }
+        .back {
+          transform: rotateY(0deg);
+        }
+      }
+    }
   }
 `;

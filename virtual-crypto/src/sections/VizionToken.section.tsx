@@ -41,6 +41,10 @@ const CustomSection = styled.article`
   .subtitle {
     margin-bottom: 0;
   }
+  .supply {
+    color: var(--ter-black);
+    font-size: 1.3rem;
+  }
 
   .share {
     margin-top: 3rem;
@@ -55,6 +59,9 @@ const CustomSection = styled.article`
       .owner-share {
         font-size: 3rem;
         line-height: 1.2;
+      }
+      .owner {
+        color: var(--ter-black);
       }
     }
   }

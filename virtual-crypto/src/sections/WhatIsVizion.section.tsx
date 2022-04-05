@@ -9,9 +9,9 @@ export const WhatIsVizionSection = () => {
     <LayoutComponent>
       <CustomWhatIs>
         <div className="left-side">
-          <video width="400" height="450" autoPlay muted loop className="video">
+          <video width="400" height="450" autoPlay muted loop>
             <source
-              src="./assets.images.Bitch Ass NFT Animation.mp4"
+              src="./assets/images/Bitch Ass NFT Animation.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.

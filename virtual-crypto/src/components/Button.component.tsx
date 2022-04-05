@@ -3,10 +3,15 @@ import styled from "styled-components";
 
 interface IButton {
   children: ReactNode | string;
+  link?: string;
 }
 
-export const ButtonComponent: FC<IButton> = ({ children }) => {
-  return <CustomButton>{children}</CustomButton>;
+export const ButtonComponent: FC<IButton> = ({ children, link }) => {
+  return (
+    <CustomButton>
+      {link ? <a href={link}>{children}</a> : children}
+    </CustomButton>
+  );
 };
 
 const CustomButton = styled.button`
@@ -18,4 +23,12 @@ const CustomButton = styled.button`
   font-family: var(--main-font);
   font-size: 1.2rem;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: var(--sec-red);
+  }
 `;
