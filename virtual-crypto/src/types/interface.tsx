@@ -64,3 +64,7 @@ export interface IImages {
   classname: string;
   img: string;
 }
+export interface IBitchAssCards {
+  img: string;
+  classname: string;
+}

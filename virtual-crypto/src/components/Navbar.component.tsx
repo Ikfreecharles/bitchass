@@ -42,7 +42,8 @@ const CustomNav = styled.nav`
     width: 120px;
   }
   .icon {
-    font-size: 4rem;
+    font-size: 3rem;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
 `;

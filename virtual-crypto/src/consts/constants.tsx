@@ -2,6 +2,7 @@ import { FaDiscord } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { FiTwitter } from "react-icons/fi";
 import {
+  IBitchAssCards,
   IContact,
   IFaq,
   IFeatures,
@@ -1069,5 +1070,27 @@ export const CONTACT: IContact[] = [
     desc: "sb@vizionprotocol.io",
     type: "mail",
     link: "sb@vizionprotocol.io",
+  },
+];
+export const BITCHASS_CARDS: IBitchAssCards[] = [
+  {
+    img: "./assets/images/card1.png",
+    classname: "img1",
+  },
+  {
+    img: "./assets/images/card2.png",
+    classname: "img2",
+  },
+  {
+    img: "./assets/images/card4.png",
+    classname: "img3",
+  },
+  {
+    img: "./assets/images/card5.png",
+    classname: "img4",
+  },
+  {
+    img: "./assets/images/card3.png",
+    classname: "img5",
   },
 ];

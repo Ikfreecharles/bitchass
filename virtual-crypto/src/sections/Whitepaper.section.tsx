@@ -39,4 +39,7 @@ const CustomSection = styled.article`
   .desc {
     margin-bottom: 1rem;
   }
+  button {
+    margin-top: 3rem;
+  }
 `;

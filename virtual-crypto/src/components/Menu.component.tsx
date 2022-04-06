@@ -9,7 +9,11 @@ import { LayoutComponent } from "./Layout.component";
 export const MenuComponent = () => {
   const isOpen = useAppSelector((state) => state.nav.isOpen);
   return (
-    <CustomMenu variants={variants} animate={isOpen ? "open" : "closed"}>
+    <CustomMenu
+      variants={variants}
+      animate={isOpen ? "open" : "closed"}
+      transition={{ duration: 0.8 }}
+    >
       <LayoutComponent classname="main-section">
         <div className="menu-items">
           <div className="left-side">
@@ -63,7 +67,7 @@ export const MenuComponent = () => {
   );
 };
 const CustomMenu = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
 
@@ -99,7 +103,11 @@ const CustomMenu = styled(motion.div)`
           background-color: var(--main-white);
           color: var(--main-black);
           font-size: 1.4rem;
-          margin-right: 0.5rem;
+          margin-right: 1rem;
+          transition: all 0.4s ease;
+          &:hover {
+            transform: scale(1.2);
+          }
         }
         .magiceden {
           width: 40px;

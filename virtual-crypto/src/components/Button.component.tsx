@@ -24,6 +24,7 @@ const CustomButton = styled.button`
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: 1px 1px 20px 0 #fbbe35;
   transition: all 0.2s ease;
   a {
     text-decoration: none;

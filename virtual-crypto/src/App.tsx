@@ -11,6 +11,7 @@ import { HeroSection } from "./sections/Hero.section";
 import { HowToMintSection } from "./sections/HowToMint.section";
 import { IdoLaunchSection } from "./sections/IdoLaunch.section";
 import { RoadmapSection } from "./sections/Roadmap.section";
+import { RoadmapTreeSection } from "./sections/RoadmapTree.section";
 import { TeamSection } from "./sections/Team.section";
 import { TokenSection } from "./sections/Token.section";
 import { VizionTokenSection } from "./sections/VizionToken.section";
@@ -32,6 +33,7 @@ function App() {
       <VizionTokenSection />
       <HowToMintSection />
       <RoadmapSection />
+      <RoadmapTreeSection />
       <WhitepaperSection />
       <FaqSection />
       <TeamSection />
