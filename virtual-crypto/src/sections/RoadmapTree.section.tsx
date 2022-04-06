@@ -63,6 +63,12 @@ const CustomVerticalTimelineElement = styled(VerticalTimelineElement)<{
     line-height: 1;
     color: var(--ter-black);
     margin-top: -15px;
+    @media screen and (max-width: 320px) {
+      font-size: 2.2rem !important;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 2.2rem !important;
+    }
   }
 
   .timeline-title {

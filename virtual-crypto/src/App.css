@@ -30,6 +30,19 @@ html {
   line-height: 1.6;
 }
 
+@media screen and (max-width: 320px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
 h1,
 h2,
 h3,

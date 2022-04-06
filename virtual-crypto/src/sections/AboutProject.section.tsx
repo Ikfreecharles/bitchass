@@ -19,7 +19,7 @@ export const AboutProjectSection = () => {
           allocation, Staking, Metaverse access to our Movie Premier and more
           dynamic perks in the Film, Music, Art and Entertainment Industry.
         </p>
-        <div className="card-list">
+        {/* <div className="card-list">
           {BITCHASS_CARDS.map(({ img, classname }, idx) => (
             <img
               key={idx}
@@ -28,7 +28,7 @@ export const AboutProjectSection = () => {
               className={`cards ${classname}`}
             />
           ))}
-        </div>
+        </div> */}
       </CustomAbout>
     </LayoutComponent>
   );
@@ -37,6 +37,12 @@ export const AboutProjectSection = () => {
 const CustomAbout = styled.article`
   padding: 0 10rem;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+  }
 
   .title {
     font-family: var(--main-font);

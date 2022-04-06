@@ -39,7 +39,10 @@ export const TeamSection = () => {
         <div className="team-members">
           {TEAM.map(({ image, name, role }, idx) => (
             <div className="member">
-              <img src={image} alt={name} className="member-img" />
+              <div className="profile-image">
+                <img src={image} alt={name} className="member-img" />
+              </div>
+
               <p className="name">{name}</p>
               <p className="role">{role}</p>
             </div>
@@ -53,6 +56,12 @@ const CustomSection = styled.article`
   .team-desc {
     text-align: center;
     padding: 0 10rem;
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+    }
     .logo {
       width: 200px;
     }
@@ -64,12 +73,26 @@ const CustomSection = styled.article`
   .team-members {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 100px;
+    grid-gap: 20px;
     margin-top: 6rem;
     text-align: center;
-    .member-img {
-      max-height: 400px;
+    width: 100%;
+    @media screen and (max-width: 320px) {
+      display: block;
     }
+    @media screen and (max-width: 480px) {
+      display: block;
+    }
+    .profile-image {
+      height: 400px;
+      width: 100%;
+      .member-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
     .name {
       font-family: var(--main-font);
       font-size: 1.6rem;

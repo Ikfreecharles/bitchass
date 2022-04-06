@@ -42,11 +42,25 @@ const CustomSection = styled.article`
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 30px;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
 
     .left-side,
     .right-side {
       background-color: var(--sec-black);
       border-radius: 20px;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 1rem;
+      }
+
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 1rem;
+      }
     }
     .left-side {
       text-align: left;
@@ -71,6 +85,13 @@ const CustomSection = styled.article`
       display: flex;
       align-items: center;
       justify-content: center;
+      @media screen and (max-width: 768px) {
+        padding: 3rem 0;
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding: 3rem 0;
+      }
     }
   }
 `;

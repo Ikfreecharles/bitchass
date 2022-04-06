@@ -32,9 +32,23 @@ const CustomSection = styled.article`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
     .card {
       text-align: center;
       width: 30%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 5rem;
+      }
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        margin-bottom: 5rem;
+      }
       .title {
         font-family: var(--main-font);
         font-size: 1.5rem;

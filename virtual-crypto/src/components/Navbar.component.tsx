@@ -36,6 +36,12 @@ const CustomNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   z-index: 20;
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 1rem;
+  }
 
   top: 0;
   .logo {

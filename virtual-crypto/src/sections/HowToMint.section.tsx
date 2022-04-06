@@ -36,6 +36,12 @@ const CustomSection = styled.article`
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 100px;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
     .step {
       text-align: center;
       .image {

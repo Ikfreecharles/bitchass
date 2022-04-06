@@ -42,6 +42,12 @@ const CustomSection = styled.article`
       align-items: center;
       justify-content: space-between;
       margin-bottom: 8rem;
+      @media screen and (max-width: 320px) {
+        flex-wrap: wrap;
+      }
+      @media screen and (max-width: 480px) {
+        flex-wrap: wrap;
+      }
 
       .title {
         cursor: pointer;

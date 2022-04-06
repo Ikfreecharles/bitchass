@@ -68,6 +68,13 @@ const CustomArticle = styled.article`
   display: grid;
   grid-template-columns: 45% 45%;
   grid-gap: 10%;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
   .left-side {
     span {
       color: var(--main-red);

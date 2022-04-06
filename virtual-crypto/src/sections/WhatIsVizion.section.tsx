@@ -9,7 +9,7 @@ export const WhatIsVizionSection = () => {
     <LayoutComponent>
       <CustomWhatIs>
         <div className="left-side">
-          <video width="400" height="450" autoPlay muted loop>
+          <video width="400" height="450" autoPlay muted loop className="video">
             <source
               src="./assets/images/Bitch Ass NFT Animation.mp4"
               type="video/mp4"
@@ -41,9 +41,21 @@ const CustomWhatIs = styled.article`
   display: grid;
   grid-template-columns: 45% 45%;
   grid-gap: 10%;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
   .left-side {
     .video {
       margin-top: 13rem;
+      @media screen and (max-width: 320px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
     }
   }
   .img {

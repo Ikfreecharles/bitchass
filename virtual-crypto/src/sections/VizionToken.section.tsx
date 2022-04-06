@@ -35,6 +35,13 @@ const CustomSection = styled.article`
   font-family: var(--main-font);
   background-color: var(--sec-black);
   padding: 3rem 8rem;
+  @media screen and (max-width: 768px) {
+    padding: 3rem 0;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 3rem 0;
+  }
+
   .logo {
     width: 100px;
   }
@@ -52,6 +59,12 @@ const CustomSection = styled.article`
     grid-template-columns: auto auto auto;
     grid-gap: 50px;
     width: 100%;
+    @media screen and (max-width: 320px) {
+      grid-template-columns: auto auto;
+    }
+    @media screen and (max-width: 480px) {
+      grid-template-columns: auto auto;
+    }
     .token-share {
       display: flex;
       flex-direction: column;

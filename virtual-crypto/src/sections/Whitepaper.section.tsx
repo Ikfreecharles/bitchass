@@ -29,6 +29,12 @@ export const WhitepaperSection = () => {
 const CustomSection = styled.article`
   text-align: center;
   padding: 0 10rem;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+  }
   .title {
     margin-bottom: 0.5rem;
   }

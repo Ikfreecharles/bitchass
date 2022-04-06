@@ -24,4 +24,16 @@ const CustomLayout = styled(motion.section)`
   width: 75%;
   max-width: 1500px;
   margin: 0 auto 10rem;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 320px) {
+    width: 94%;
+  }
+  @media screen and (max-width: 480px) {
+    width: 94%;
+  }
 `;

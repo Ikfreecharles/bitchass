@@ -85,6 +85,12 @@ const CustomMenu = styled(motion.div)`
     display: grid;
     grid-template-columns: 45% 45%;
     grid-gap: 10%;
+    @media screen and (max-width: 320px) {
+      display: block;
+    }
+    @media screen and (max-width: 480px) {
+      display: block;
+    }
 
     .left-side {
       .social-media {
