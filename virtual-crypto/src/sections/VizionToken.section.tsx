@@ -13,8 +13,8 @@ export const VizionTokenSection = () => {
           alt="logo"
           className="logo"
         />
-        <HeadingThreeComponent classname="subtitle">
-          $Vizion token
+        <HeadingThreeComponent classname="subtitle" sentencecase>
+          $VIZION Token
         </HeadingThreeComponent>
         <span className="supply">Total Supply: 100,000,000</span>
         <div className="share">
@@ -34,7 +34,8 @@ const CustomSection = styled.article`
   text-align: center;
   font-family: var(--main-font);
   background-color: var(--sec-black);
-  padding: 3rem 8rem;
+  padding: 31px 41px;
+  border-radius: 12px;
   @media screen and (max-width: 768px) {
     padding: 3rem 0;
   }
@@ -46,19 +47,25 @@ const CustomSection = styled.article`
     width: 100px;
   }
   .subtitle {
-    margin-bottom: 0;
+    margin: 10px 0;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 2px;
   }
   .supply {
     color: var(--ter-black);
-    font-size: 1.3rem;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
   }
 
   .share {
-    margin-top: 3rem;
+    margin: 10px auto 0;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 50px;
-    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
     @media screen and (max-width: 320px) {
       grid-template-columns: auto auto;
     }
@@ -69,12 +76,22 @@ const CustomSection = styled.article`
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
+      height: 100%;
       .owner-share {
-        font-size: 3rem;
-        line-height: 1.2;
+        font-size: 35px;
+        line-height: 60px;
+        lettwe-spacing: 2px;
+        font-weight: 400;
+        margin-top: 10px;
       }
       .owner {
         color: var(--ter-black);
+        letter-spacing: 2px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        margin-bottom: 10px;
       }
     }
   }

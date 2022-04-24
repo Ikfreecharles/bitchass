@@ -18,7 +18,7 @@ export const WhatIsVizionSection = () => {
           </video>
         </div>
         <div className="right-side">
-          <HeadingTwoComponent>
+          <HeadingTwoComponent sentencecase>
             What Is ViZion Protocol and Why The Bitch Ass NFT Matters...
           </HeadingTwoComponent>
           <img
@@ -39,8 +39,9 @@ export const WhatIsVizionSection = () => {
 
 const CustomWhatIs = styled.article`
   display: grid;
-  grid-template-columns: 45% 45%;
-  grid-gap: 10%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  padding: 0 4rem;
   @media screen and (max-width: 768px) {
     display: block;
   }

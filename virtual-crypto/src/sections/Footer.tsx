@@ -4,7 +4,7 @@ import { LayoutComponent } from "../components/Layout.component";
 
 export const Footer = () => {
   return (
-    <LayoutComponent>
+    <LayoutComponent style={{ marginBottom: "20px" }}>
       <CustomSection>
         <div className="footer">
           <p>@ 2022 Bitch Ass The Movie. All Rights Reserved.</p>
@@ -31,6 +31,9 @@ const CustomSection = styled.article`
     position: absolute;
     bottom: 0;
     margin: 0 auto;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 0 0 5px #fff;
     a {
       color: var(--main-yellow);
     }

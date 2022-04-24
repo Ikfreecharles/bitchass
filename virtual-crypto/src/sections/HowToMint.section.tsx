@@ -9,7 +9,7 @@ export const HowToMintSection = () => {
   return (
     <LayoutComponent>
       <CustomSection>
-        <HeadingTwoComponent>
+        <HeadingTwoComponent sentencecase>
           The Official "Bitch Ass" NFT Collection
         </HeadingTwoComponent>
         <HeadingThreeComponent>How To Mint</HeadingThreeComponent>
@@ -34,8 +34,8 @@ const CustomSection = styled.article`
   text-align: center;
   .mint-steps {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
     @media screen and (max-width: 768px) {
       display: block;
     }
@@ -58,8 +58,10 @@ const CustomSection = styled.article`
       .title {
         font-family: var(--main-font);
         text-transform: uppercase;
-        font-size: 1.6rem;
-        margin-bottom: 1rem;
+        font-size: 24px;
+        margin: 20px 0;
+        letter-spacing: 1px;
+        font-weight: 500;
       }
       .desc {
         color: var(--ter-black);

@@ -51,13 +51,15 @@ const CustomSection = styled.article`
 
       .title {
         cursor: pointer;
-        border-radius: 5px;
-        background-color: var(--main-white);
+        border-radius: 9px;
+        background-color: #dddddd;
         color: var(--main-yellow);
-        padding: 0.5rem 1.5rem;
+        padding: 9px 30px;
+        font-size: 14px;
+        line-height: 20px;
         font-family: var(--main-font);
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 700;
         box-shadow: 0 0 20px -2px #fbbe35;
       }
     }

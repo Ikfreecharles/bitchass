@@ -66,8 +66,9 @@ export const AboutSection = () => {
 
 const CustomArticle = styled.article`
   display: grid;
-  grid-template-columns: 45% 45%;
-  grid-gap: 10%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  padding: 0 3rem;
   @media screen and (max-width: 768px) {
     display: block;
   }
@@ -92,12 +93,13 @@ const CustomArticle = styled.article`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: 5rem;
     .images {
-      height: 450px;
+      height: 350px;
       margin: 0;
       padding: 0;
       top: 20px;
-      width: 330px;
+      width: 250px;
 
       position: relative;
       transform-style: preserve-3d;

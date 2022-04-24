@@ -9,7 +9,7 @@ export const FeaturesSection = () => {
   return (
     <LayoutComponent>
       <CustomSection>
-        <HeadingTwoComponent>Bitch Ass NFT</HeadingTwoComponent>
+        <HeadingTwoComponent sentencecase>Bitch Ass NFT</HeadingTwoComponent>
         <HeadingThreeComponent>FEATURES</HeadingThreeComponent>
         <div className="cards">
           {FEATURES.map(({ id, title, desc, image }) => (
@@ -29,8 +29,11 @@ const CustomSection = styled.article`
   text-align: center;
 
   .cards {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 25px;
+    grid-column-gap: 16px;
     justify-content: space-between;
     @media screen and (max-width: 768px) {
       display: block;
@@ -40,7 +43,6 @@ const CustomSection = styled.article`
     }
     .card {
       text-align: center;
-      width: 30%;
       @media screen and (max-width: 768px) {
         width: 100%;
         margin-bottom: 5rem;
@@ -51,8 +53,9 @@ const CustomSection = styled.article`
       }
       .title {
         font-family: var(--main-font);
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        font-size: 24px;
+        margin: 20px 0;
+        letter-spacing: 1px;
       }
       .desc {
         color: var(--ter-black);

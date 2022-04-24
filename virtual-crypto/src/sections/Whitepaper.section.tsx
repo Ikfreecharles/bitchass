@@ -9,14 +9,15 @@ export const WhitepaperSection = () => {
   return (
     <LayoutComponent>
       <CustomSection>
-        <HeadingThreeComponent classname="title">
+        <HeadingThreeComponent classname="title" sentencecase>
           Is That it?
         </HeadingThreeComponent>
         <p className="question">Are you Serious?</p>
         {IS_THAT_IT.map((item, idx) => (
-          <p key={idx} className="desc">
-            {item}
-          </p>
+          <div key={idx}>
+            <p className="desc">{item}</p>
+            <br />
+          </div>
         ))}
         <ButtonComponent link="https://www.dropbox.com/s/fb0rx4df78k6r5e/ViZion%20Protocol%20White%20Paper%202021.pdf?dl=0">
           {"Click here to view White Paper".toUpperCase()}
@@ -28,7 +29,9 @@ export const WhitepaperSection = () => {
 
 const CustomSection = styled.article`
   text-align: center;
-  padding: 0 10rem;
+  max-width: 640px;
+  margin: 0 auto;
+  margin-top: -60vh;
   @media screen and (max-width: 768px) {
     padding: 0;
   }
@@ -39,11 +42,12 @@ const CustomSection = styled.article`
     margin-bottom: 0.5rem;
   }
   .question {
-    margin-bottom: 0.5rem;
+    margin: 20px 0 0;
     font-weight: 700;
   }
   .desc {
-    margin-bottom: 1rem;
+    margin: 0 auto;
+    width: 80%;
   }
   button {
     margin-top: 3rem;

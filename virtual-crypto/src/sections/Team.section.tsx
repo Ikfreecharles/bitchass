@@ -7,7 +7,7 @@ import { TEAM } from "../consts/constants";
 
 export const TeamSection = () => {
   return (
-    <LayoutComponent>
+    <LayoutComponent style={{ marginBottom: 0 }}>
       <CustomSection>
         <div className="team-desc">
           <img
@@ -15,22 +15,22 @@ export const TeamSection = () => {
             alt="logo"
             className="logo"
           />
-          <HeadingTwoComponent>
+          <HeadingTwoComponent sentencecase classname="team-subtitle">
             Bitch Asss Official NFT Launch
           </HeadingTwoComponent>
-          <HeadingThreeComponent>Meet the Team</HeadingThreeComponent>
-          <p>
+          <HeadingThreeComponent sentencecase classname="team-title">
+            Meet the Team
+          </HeadingThreeComponent>
+          <p className="team-desc">
             The Official Bitch Ass NFT Launch is headed by none other than one
             of the Co-Founders of ViZion Protocol and the Director of the Film,
             Bill Posley. As mentioned before, another Co-Founder of ViZion
             Protocol, Tunde Laleye, is starring as Bitch Ass himself! ViZion
             Protocol has over 12 members on it's team, which can be found here
             on{" "}
-            <span>
-              <a href="https://vizionprotocol.io/" className="link">
-                Our Website
-              </a>
-            </span>
+            <a href="https://vizionprotocol.io/" className="link">
+              Our Website
+            </a>
             . These are the ViZion Protocol team members who helped put Bitch
             Ass together and will help execute this launch.
           </p>
@@ -38,7 +38,7 @@ export const TeamSection = () => {
 
         <div className="team-members">
           {TEAM.map(({ image, name, role }, idx) => (
-            <div className="member">
+            <div className="member" key={idx}>
               <div className="profile-image">
                 <img src={image} alt={name} className="member-img" />
               </div>
@@ -55,7 +55,8 @@ export const TeamSection = () => {
 const CustomSection = styled.article`
   .team-desc {
     text-align: center;
-    padding: 0 10rem;
+    max-width: 640px;
+    margin: 0 auto;
     @media screen and (max-width: 768px) {
       padding: 0;
     }
@@ -65,6 +66,15 @@ const CustomSection = styled.article`
     .logo {
       width: 200px;
     }
+    .team-subtitle {
+      margin: 0;
+    }
+    .team-title {
+      margin: 10px 0 40px;
+    }
+    .team-desc {
+      width: 80%;
+    }
     .link {
       color: var(--main-red);
     }
@@ -72,8 +82,8 @@ const CustomSection = styled.article`
 
   .team-members {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 150px;
     margin-top: 6rem;
     text-align: center;
     width: 100%;
@@ -95,7 +105,8 @@ const CustomSection = styled.article`
 
     .name {
       font-family: var(--main-font);
-      font-size: 1.6rem;
+      font-size: 24px;
+      margin: 20px 0;
     }
     .role {
       color: var(--ter-black);

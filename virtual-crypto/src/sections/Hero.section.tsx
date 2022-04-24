@@ -15,10 +15,10 @@ export const HeroSection = () => {
             alt="bitch ass logo"
             className="img"
           />
-          <HeadingTwoComponent classname="mint-soon">
-            NFT LAUNCH
+          <HeadingTwoComponent classname="mint-soon" sentencecase>
+            NFT Launch
           </HeadingTwoComponent>
-          <ButtonComponent link="https://vizionprotocol.io/">
+          <ButtonComponent link="https://vizionprotocol.io/" noshadow>
             <div className="button-item">
               <span>MINT-SOON</span>
               <img
@@ -35,7 +35,7 @@ export const HeroSection = () => {
 };
 
 const CustomHero = styled.div`
-  height: 750px;
+  height: 100vh;
   background: url("./assets/images/B_tch-Ass.jpeg") no-repeat center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,9 +51,11 @@ const CustomHero = styled.div`
     flex-direction: column;
     align-items: center;
     h1 {
-      font-size: 1rem;
+      font-size: 14px;
       color: var(--main-red);
       text-shadow: 0 0 9px #fff;
+      letter-spacing: 4px;
+      line-height: 20px;
     }
     .mint-soon {
       font-family: var(--main-font);
@@ -64,6 +66,7 @@ const CustomHero = styled.div`
 
   .img {
     width: 300px;
+    margin-bottom: 30px;
   }
   .button-item {
     display: flex;

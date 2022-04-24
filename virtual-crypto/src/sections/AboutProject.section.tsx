@@ -3,39 +3,65 @@ import styled from "styled-components";
 import { HeadingTwoComponent } from "../components/HeadingTwo.component";
 import { LayoutComponent } from "../components/Layout.component";
 import { BITCHASS_CARDS } from "../consts/constants";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
+import { motion } from "framer-motion";
 
 export const AboutProjectSection = () => {
+  const visibilityRef: React.LegacyRef<HTMLDivElement> | undefined =
+    React.createRef();
   return (
     <LayoutComponent>
       <CustomAbout>
-        <h2 className="title">1000</h2>
-        <HeadingTwoComponent classname="subtitle">
+        <VisibilitySensor>
+          {({ isVisible }) => (
+            <div style={{ height: 100 }} ref={visibilityRef}>
+              {isVisible ? (
+                <CountUp start={0} end={1000} duration={1} delay={0}>
+                  {({ countUpRef, start }) => (
+                    <div>
+                      <span className="title" ref={countUpRef} />
+                    </div>
+                  )}
+                </CountUp>
+              ) : null}
+            </div>
+          )}
+        </VisibilitySensor>
+
+        <HeadingTwoComponent classname="subtitle" sentencecase>
           Bitch Ass The Movie NFT's
         </HeadingTwoComponent>
-        <p>
+        <p className="about-desc">
           Customized and Uniquely designed to include some of the best utility
           in the NFT space. Bitch Ass NFTs are the first ever NFT project that
           provides unparalleled utility, several red carpet VIP experiences, IDO
           allocation, Staking, Metaverse access to our Movie Premier and more
           dynamic perks in the Film, Music, Art and Entertainment Industry.
         </p>
-        {/* <div className="card-list">
-          {BITCHASS_CARDS.map(({ img, classname }, idx) => (
-            <img
-              key={idx}
-              src={img}
-              alt={classname}
-              className={`cards ${classname}`}
-            />
-          ))}
-        </div> */}
+        <div className="card-list">
+          <div className="card-container">
+            {BITCHASS_CARDS.map(
+              ({ img, classname, x, initial, transition }, idx) => (
+                <motion.img
+                  key={idx}
+                  src={img}
+                  alt={classname}
+                  className={`cards ${classname}`}
+                  whileInView={{ x }}
+                  initial={initial}
+                  transition={transition}
+                />
+              )
+            )}
+          </div>
+        </div>
       </CustomAbout>
     </LayoutComponent>
   );
 };
 
 const CustomAbout = styled.article`
-  padding: 0 10rem;
   text-align: center;
   @media screen and (max-width: 768px) {
     padding: 0;
@@ -47,8 +73,9 @@ const CustomAbout = styled.article`
   .title {
     font-family: var(--main-font);
     color: var(--main-red);
-    font-size: 4.8rem;
-    line-height: 1.2;
+    font-size: 70px;
+    line-height: 80px;
+    letter-spacing: 2px;
     text-shadow: 0 0 9px #fff;
   }
   .subtitle {
@@ -56,13 +83,24 @@ const CustomAbout = styled.article`
     font-family: var(--main-font);
     margin: 1rem 0;
   }
+  .about-desc {
+    width: 65%;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+  }
   .card-list {
-    display: flex;
-    position: relative;
     width: 100%;
     margin-top: 3rem;
+    .card-container {
+      width: fit-content;
+      margin: 0 auto;
+      display: flex;
+      position: relative;
+    }
     .cards {
-      height: 300px;
+      height: 320px;
       z-index: 3;
       vertical-align: middle;
       position: relative;
@@ -71,29 +109,19 @@ const CustomAbout = styled.article`
     }
 
     .img1 {
-      transform: scale3d(0.8, 0.8, 1) translate3d(0px, 0px, 0px);
-      transform-style: preserve-3d;
       z-index: 1;
     }
     .img2 {
-      transform: scale3d(0.9, 0.9, 1) translate3d(-80px, 0px, 0px);
-      transform-style: preserve-3d;
       z-index: 2;
     }
     .img3 {
-      transform: translate3d(-100px, 0px, 0px);
-      transform-style: preserve-3d;
       z-index: 3;
     }
 
     .img4 {
-      transform: scale3d(0.9, 0.9, 1) translate3d(-160px, 0px, 0px);
-      transform-style: preserve-3d;
       z-index: 2;
     }
     .img5 {
-      transform: scale3d(0.8, 0.8, 1) translate3d(-250px, 0px, 0px);
-      transform-style: preserve-3d;
       z-index: 1;
     }
   }

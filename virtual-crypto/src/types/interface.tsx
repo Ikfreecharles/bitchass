@@ -67,4 +67,14 @@ export interface IImages {
 export interface IBitchAssCards {
   img: string;
   classname: string;
+  x: string;
+  initial: {
+    x: string;
+    scale: string;
+  };
+  transition: {
+    duration: number;
+    ease: string;
+    delay: number;
+  };
 }

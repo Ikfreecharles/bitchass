@@ -5,15 +5,21 @@ import styled from "styled-components";
 interface ILayout {
   children: ReactNode;
   classname?: string;
+  style?: object;
 }
 
-export const LayoutComponent: FC<ILayout> = ({ children, classname }) => {
+export const LayoutComponent: FC<ILayout> = ({
+  children,
+  classname,
+  style,
+}) => {
   return (
     <CustomLayout
       className={classname}
       initial={{ opacity: 0, y: "40%" }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
+      style={style}
     >
       {children}
     </CustomLayout>
@@ -21,7 +27,7 @@ export const LayoutComponent: FC<ILayout> = ({ children, classname }) => {
 };
 
 const CustomLayout = styled(motion.section)`
-  width: 75%;
+  width: 80vw;
   max-width: 1500px;
   margin: 0 auto 10rem;
   @media screen and (max-width: 768px) {

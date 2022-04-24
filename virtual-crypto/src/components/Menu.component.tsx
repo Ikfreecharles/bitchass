@@ -17,11 +17,11 @@ export const MenuComponent = () => {
       <LayoutComponent classname="main-section">
         <div className="menu-items">
           <div className="left-side">
-            <h2>ViZion Protocol</h2>
+            <h2 className="logo-name">ViZion Protocol</h2>
             <div className="social-media">
-              {SOCIAL_MEDIA.map(({ name, Icon, link }) =>
+              {SOCIAL_MEDIA.map(({ name, Icon, link }, idx) =>
                 name && name === "magiceden" ? (
-                  <a href={link}>
+                  <a href={link} key={idx}>
                     <div className="social-icon">
                       <img
                         src="./assets/images/MAGIC_EDEN_LOGO-removebg-preview.png"
@@ -31,7 +31,7 @@ export const MenuComponent = () => {
                     </div>
                   </a>
                 ) : (
-                  <a href={link}>
+                  <a href={link} key={idx}>
                     <div className="social-icon">
                       <Icon />
                     </div>
@@ -55,9 +55,14 @@ export const MenuComponent = () => {
           <div className="right-side">
             <ul>
               {MENU_ITEMS.map(({ title, id }, idx) => (
-                <li key={idx}>
-                  <a href={`#${id}`}>{title}</a>
-                </li>
+                <div className="menu-list">
+                  <li key={idx} className="normal-list">
+                    <a href={`#${id}`}>{title}</a>
+                  </li>
+                  <li key={idx} className="strikethrough-list">
+                    <a href={`#${id}`}>{title}</a>
+                  </li>
+                </div>
               ))}
             </ul>
           </div>
@@ -70,15 +75,15 @@ const CustomMenu = styled(motion.div)`
   position: fixed;
   width: 100%;
   height: 100%;
+  backdrop-filter: blur(1em);
+  background-color: rgba(17, 20, 19, 0);
+  z-index: 5;
+  display: flex;
+  align-items: center;
 
   .main-section {
     margin-bottom: 0;
   }
-
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 5;
-  display: flex;
-  align-items: center;
 
   .menu-items {
     width: 100%;
@@ -93,6 +98,12 @@ const CustomMenu = styled(motion.div)`
     }
 
     .left-side {
+      .logo-name {
+        letter-spacing: 0;
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 700;
+      }
       .social-media {
         display: flex;
         align-items: center;
@@ -121,30 +132,53 @@ const CustomMenu = styled(motion.div)`
       }
       .contact {
         font-family: var(--main-font);
+        .title {
+          letter-spacing: 0;
+          font-size: 14px;
+        }
         .desc {
           margin-bottom: 1rem;
           a {
             color: var(--main-red);
             text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 0;
           }
+        }
+      }
+    }
+    .menu-list {
+      overflow: hidden;
+      height: 50px;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        .normal-list {
+          transform: translateY(-50px);
+        }
+        .strikethrough-list {
+          transform: translateY(-50px);
         }
       }
     }
     li {
       list-style: none;
-      padding: 1rem 0;
-
+      transition: all 0.2s ease;
       a {
         font-family: var(--main-font);
-        font-size: 2rem;
-        font-weight: 800;
+        font-size: 34px;
+        line-height: 43px;
+        font-weight: 700;
         text-transform: uppercase;
         text-decoration: none;
-        transition: all 0.2s ease;
-        &:hover {
-          color: var(--main-yellow);
-          text-decoration: line-through;
-        }
+        position: relative;
+      }
+    }
+    .strikethrough-list {
+      a {
+        color: var(--main-yellow);
+        text-decoration: line-through;
       }
     }
   }

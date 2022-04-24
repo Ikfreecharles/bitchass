@@ -27,7 +27,7 @@ function App() {
       <AboutProjectSection />
       <AboutSection />
       <WhatIsVizionSection />
-      <TokenSection />
+
       <FeaturesSection />
       <IdoLaunchSection />
       <VizionTokenSection />

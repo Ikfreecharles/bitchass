@@ -830,7 +830,7 @@ export const FEATURES: IFeatures[] = [
   {
     id: "1",
     image: "./assets/nfts/61e98dfec9bd3e4aefd30940_stable.png",
-    title: "Stalking",
+    title: "Staking",
     desc: "Every 'Bitch Ass NFT' will have the ability to STAKE and EARN our own cryptocurrency token, VIZION. ViZion Protocol's entire Eco-System is built with the ability to give back and create value for it's holders, especially each and every one of their NFT launches.",
   },
   {
@@ -1025,7 +1025,7 @@ export const TEAM: ITeam[] = [
   {
     image: "./assets/images/tunde_laleye-removebg-preview.png",
     name: "Tunde Laleye",
-    role: "Co-Foounder",
+    role: "Co-Founder",
   },
   {
     image: "./assets/images/shane_brown-removebg-preview.png",
@@ -1076,21 +1076,36 @@ export const BITCHASS_CARDS: IBitchAssCards[] = [
   {
     img: "./assets/images/card1.png",
     classname: "img1",
+    initial: { x: "350px", scale: "0.8" },
+    x: "100px",
+    transition: { duration: 0.5, ease: "linear", delay: 1.2 },
   },
   {
     img: "./assets/images/card2.png",
     classname: "img2",
+    initial: { x: "180px", scale: "0.9" },
+    x: "60px",
+    transition: { duration: 0.5, ease: "linear", delay: 1.2 },
   },
   {
     img: "./assets/images/card4.png",
     classname: "img3",
+    initial: { x: "unset", scale: "1" },
+    x: "unset",
+    transition: { duration: 0.5, ease: "linear", delay: 1.2 },
   },
   {
     img: "./assets/images/card5.png",
     classname: "img4",
+    initial: { x: "-180px", scale: "0.9" },
+    x: "-60px",
+    transition: { duration: 0.5, ease: "linear", delay: 1.2 },
   },
   {
     img: "./assets/images/card3.png",
     classname: "img5",
+    initial: { x: "-350px", scale: "0.8" },
+    x: "-100px",
+    transition: { duration: 0.5, ease: "linear", delay: 1.2 },
   },
 ];
