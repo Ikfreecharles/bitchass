@@ -55,11 +55,11 @@ export const MenuComponent = () => {
           <div className="right-side">
             <ul>
               {MENU_ITEMS.map(({ title, id }, idx) => (
-                <div className="menu-list">
-                  <li key={idx} className="normal-list">
+                <div className="menu-list" key={idx}>
+                  <li className="normal-list">
                     <a href={`#${id}`}>{title}</a>
                   </li>
-                  <li key={idx} className="strikethrough-list">
+                  <li className="strikethrough-list">
                     <a href={`#${id}`}>{title}</a>
                   </li>
                 </div>
