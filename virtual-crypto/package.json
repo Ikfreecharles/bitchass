@@ -26,7 +26,8 @@
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^5.3.5",
     "typescript": "^4.6.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "nth-check": ">=2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,6 +56,8 @@
   "devDependencies": {
     "@types/react-redux": "^7.1.23",
     "@types/react-vertical-timeline-component": "^3.3.2",
-    "@types/styled-components": "^5.1.24"
+    "@types/styled-components": "^5.1.24",
+    "async": ">=2.6.4",
+    "nth-check": ">=2.0.1"
   }
 }
